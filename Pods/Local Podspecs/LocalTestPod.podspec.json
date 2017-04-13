@@ -1,0 +1,42 @@
+{
+  "name": "LocalTestPod",
+  "version": "0.1.0",
+  "summary": "A short description of LocalTestPod.",
+  "description": "A short description of LocalTestPod.",
+  "homepage": "https://github.com/Stefan Pühringer/LocalTestPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Stefan Pühringer": "me@stefanpuehringer.com"
+  },
+  "source": {
+    "git": "https://github.com/AFNetworking/AFNetworking.git",
+    "branch": "master"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "default_subspecs": "core",
+  "subspecs": [
+    {
+      "name": "core",
+      "source_files": "Example/Classes/**/Post.*",
+      "dependencies": {
+        "AFNetworking/Serialization": [
+          "~> 2.3"
+        ]
+      }
+    },
+    {
+      "name": "additional",
+      "source_files": "Example/Classes/**/User.*",
+      "dependencies": {
+        "AFNetworking/Serialization": [
+          "~> 2.3"
+        ]
+      }
+    }
+  ]
+}

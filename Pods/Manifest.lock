@@ -1,27 +1,29 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - LocalTestPod/additional (0.1.0):
+    - AFNetworking/Serialization (~> 2.3)
+  - LocalTestPod/core (0.1.0):
+    - AFNetworking/Serialization (~> 2.3)
 
 DEPENDENCIES:
-  - AFNetworking
-  - AFNetworking/Serialization
+  - AFNetworking/Security
+  - LocalTestPod/additional (from `./LocalTestPod/`)
+  - LocalTestPod/core (from `./LocalTestPod/`)
+
+EXTERNAL SOURCES:
+  LocalTestPod:
+    :podspec: "./LocalTestPod/"
+
+CHECKOUT OPTIONS:
+  LocalTestPod:
+    :commit: 4f3c694920ed0f5d3a8e180aacaf3af40c2efb4a
+    :git: https://github.com/AFNetworking/AFNetworking.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  LocalTestPod: 2c3b952332b0896070958f4aa052f5461ac5e484
 
-PODFILE CHECKSUM: 65c20061611c5a8600178169dd73432f74565f7b
+PODFILE CHECKSUM: c18b411b67d47d7cee1cd3c2c5fc010280984294
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1

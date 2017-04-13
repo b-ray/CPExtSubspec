@@ -1,18 +1,14 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '9.0'
+use_frameworks!
 
 target 'CPExtSubspecs' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for CPExtSubspecs
-  pod 'AFNetworking', :subspecs => ['Serialization']
-end
-
-target 'TodayExtension' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for TodayExtension
-  pod 'AFNetworking'
+    pod 'AFNetworking', :subspecs => ['Security']
+    pod 'LocalTestPod', :podspec => './LocalTestPod/', :subspecs => ['additional']
+  
+  target 'AUITests' do
+      inherit! :search_paths
+      
+      pod 'LocalTestPod', :podspec => './LocalTestPod/', :subspecs => ['core']
+  end
 end
